@@ -6,8 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.futurum.campaignmanager.account.model.Campaign;
 import pl.futurum.campaignmanager.account.model.CampaignStatus;
 import pl.futurum.campaignmanager.account.model.EmeraldAccount;
-import pl.futurum.campaignmanager.campaign.repository.CampaignRepository;
 import pl.futurum.campaignmanager.account.repository.EmeraldAccountRepository;
+import pl.futurum.campaignmanager.campaign.repository.CampaignRepository;
 
 import java.util.List;
 
