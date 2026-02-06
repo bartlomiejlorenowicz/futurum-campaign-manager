@@ -1,4 +1,4 @@
-package pl.futurum.campaignmanager.repository;
+package pl.futurum.campaignmanager.account.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import pl.futurum.campaignmanager.account.model.EmeraldAccount;
