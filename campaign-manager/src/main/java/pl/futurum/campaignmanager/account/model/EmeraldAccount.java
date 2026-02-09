@@ -1,8 +1,8 @@
 package pl.futurum.campaignmanager.account.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import pl.futurum.campaignmanager.exception.InsufficientFundsException;
 
 import java.math.BigDecimal;
 
@@ -24,7 +24,7 @@ public class EmeraldAccount {
 
     public void deduct(BigDecimal amount) {
         if (balance.compareTo(amount) < 0) {
-            throw new IllegalStateException("Cannot deduct amount that less than balance");
+            throw new InsufficientFundsException("Insufficient emerald balance");
         }
         balance = balance.subtract(amount);
     }
