@@ -67,9 +67,9 @@ public class CampaignService {
 
     @Transactional(readOnly = true)
     public List<CampaignResponse> listCampaigns(Long productId) {
-        return campaignRepository.findAllByProductId(productId)
+        return campaignRepository.findAllByProduct_Id(productId)
                 .stream()
-                .map(this::toResponse)
+                .map(CampaignMapper::toResponse)
                 .toList();
     }
 
@@ -104,7 +104,7 @@ public class CampaignService {
     }
 
     private Campaign getCampaignEntity(Long productId, Long campaignId) {
-        return campaignRepository.findByIdAndProductId(campaignId, productId)
+        return campaignRepository.findByIdAndProduct_Id(campaignId, productId)
                 .orElseThrow(() -> new NotFoundException("Campaign not found"));
     }
 

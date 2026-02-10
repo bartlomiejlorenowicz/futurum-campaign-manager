@@ -7,6 +7,7 @@ import pl.futurum.campaignmanager.account.model.EmeraldAccount;
 @Entity
 @Table(name = "products")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

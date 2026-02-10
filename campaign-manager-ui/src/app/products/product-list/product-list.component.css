@@ -1,0 +1,172 @@
+/* ===== Page title ===== */
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* ===== Sections ===== */
+
+.section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.section-muted {
+  background: #f9fafb;
+}
+
+.section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ===== Product list ===== */
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== Product main info ===== */
+
+.product-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-main strong {
+  font-size: 15px;
+}
+
+/* ===== Badge ===== */
+
+.badge {
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ===== Actions ===== */
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== Buttons ===== */
+
+.btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+.btn-secondary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #1d4ed8;
+}
+
+.btn-link {
+  color: #2563eb;
+  background: transparent;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Add product form ===== */
+
+.form-inline {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-inline input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #15803d;
+}
+
+/* ===== Centered add product form ===== */
+
+.section-muted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-muted h2 {
+  text-align: center;
+}
+
+.form-inline {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+.form-inline input {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.form-inline .btn-primary {
+  flex: 0 0 auto;
+}
+

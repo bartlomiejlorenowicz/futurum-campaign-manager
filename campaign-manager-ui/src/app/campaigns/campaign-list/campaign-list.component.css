@@ -1,0 +1,107 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.campaign-list {
+  max-width: 800px;
+  margin: 0 auto 24px;
+}
+
+.campaign-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.campaign-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.campaign-meta {
+  font-size: 13px;
+  color: #6b7280;
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.campaign-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  margin: 16px 0;
+}
+
+/* FORM – reused style */
+.form-vertical {
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 16px 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.form-actions {
+  margin-top: 18px;
+}
+
+.btn {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}

@@ -19,11 +19,12 @@ public class ProductMapper {
                 .build();
     }
 
-    public static ProductResponse toResponse(Product product) {
+    public static ProductResponse toResponse(Product product, long campaignsCount) {
         return new ProductResponse(
                 product.getId(),
                 product.getName(),
-                product.getEmeraldAccount().getId()
+                product.getEmeraldAccount().getId(),
+                campaignsCount
         );
     }
 }

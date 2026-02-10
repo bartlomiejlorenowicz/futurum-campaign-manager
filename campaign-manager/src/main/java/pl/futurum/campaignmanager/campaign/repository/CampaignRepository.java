@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CampaignRepository extends JpaRepository<Campaign, Long> {
-    List<Campaign> findAllByProductId(Long productId);
-    Optional<Campaign> findByIdAndProductId(Long id, Long productId);
+    List<Campaign> findAllByProduct_Id(Long productId);
+
+    Optional<Campaign> findByIdAndProduct_Id(Long id, Long productId);
+
+    long countByProduct_Id(Long productId);
 }

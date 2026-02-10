@@ -4,13 +4,13 @@ import pl.futurum.campaignmanager.account.model.CampaignStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Set;
+import java.util.List;
 
 public record CampaignResponse(
         Long id,
         Long productId,
         String name,
-        Set<String> keywords,
+        List<String> keywords,
         BigDecimal bidAmount,
         BigDecimal fund,
         CampaignStatus status,

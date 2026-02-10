@@ -1,0 +1,29 @@
+<h2>Edit product</h2>
+
+<form (ngSubmit)="save()" class="form-vertical">
+
+  <div class="form-group">
+    <label>Product name</label>
+    <input
+      [(ngModel)]="name"
+      name="name"
+      placeholder="e.g. Spring Boot Course"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Campaigns assigned</label>
+    <input
+      [value]="campaignsCount"
+      disabled
+    />
+  </div>
+
+  <div class="form-actions">
+    <button type="submit">Save</button>
+
+    <a routerLink="/">← Back to products</a>
+  </div>
+
+</form>

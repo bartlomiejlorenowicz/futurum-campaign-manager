@@ -1,0 +1,130 @@
+<a class="back-link"
+   [routerLink]="['/']">
+  ← Back to products
+</a>
+
+<h2>Campaigns for product {{ productName }}</h2>
+
+<div class="campaign-list" *ngIf="campaigns.length > 0">
+  <div class="campaign-item" *ngFor="let c of campaigns">
+
+    <div class="campaign-main">
+      <strong>{{ c.name }}</strong>
+      <span class="status">({{ c.status }})</span>
+
+      <div class="campaign-meta">
+        <span>Fund: {{ c.fund }}</span>
+        <span>Bid: {{ c.bidAmount }}</span>
+        <span>{{ c.town }} ({{ c.radiusKm }} km)</span>
+      </div>
+    </div>
+
+    <div class="campaign-actions">
+      <a
+        class="btn btn-secondary"
+        [routerLink]="['/products', productId, 'campaigns', c.id, 'edit']">
+        Edit
+      </a>
+
+      <button
+        class="btn btn-danger"
+        (click)="deleteCampaign(c.id)">
+        Delete
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<p *ngIf="campaigns.length === 0" class="empty-state">
+  No campaigns yet.
+</p>
+
+<hr>
+
+<h3>Add campaign</h3>
+
+<form (ngSubmit)="addCampaign()" class="form-vertical">
+
+  <div class="form-group">
+    <label>Campaign name</label>
+    <input
+      [(ngModel)]="name"
+      name="name"
+      placeholder="e.g. Spring Boot Course"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Keywords</label>
+    <input
+      [(ngModel)]="keywords"
+      name="keywords"
+      placeholder="java, spring, backend"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Bid amount</label>
+    <input
+      type="number"
+      min="0"
+      step="0.01"
+      [(ngModel)]="bidAmount"
+      name="bidAmount"
+      placeholder="e.g. 1.50"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Total campaign budget</label>
+    <input
+      type="number"
+      min="0"
+      [(ngModel)]="fund"
+      name="fund"
+      placeholder="e.g. 500"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Status</label>
+    <select [(ngModel)]="status" name="status">
+      <option value="ON">ON</option>
+      <option value="OFF">OFF</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Town</label>
+    <input
+      [(ngModel)]="town"
+      name="town"
+      placeholder="e.g. Warsaw"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Radius (km)</label>
+    <input
+      type="number"
+      min="1"
+      [(ngModel)]="radiusKm"
+      name="radiusKm"
+      placeholder="e.g. 25"
+      required
+    />
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+      Add campaign
+    </button>
+  </div>
+
+</form>
