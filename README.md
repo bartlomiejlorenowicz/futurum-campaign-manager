@@ -96,3 +96,18 @@ Uruchomienie testów:
 cd backend
 ./mvnw test
 ```
+
+## Dokumentacja API (Swagger)
+
+Backend udostępnia interaktywną dokumentację REST API
+za pomocą **Swagger UI**.
+
+Po uruchomieniu backendu dokumentacja jest dostępna pod adresem:
+
+http://localhost:8080/swagger-ui/index.html
+
+Swagger umożliwia:
+- przegląd dostępnych endpointów
+- testowanie zapytań HTTP bezpośrednio z przeglądarki
+- podgląd struktur requestów i response’ów
+
